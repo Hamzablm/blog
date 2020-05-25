@@ -1,6 +1,6 @@
 ---
 title: 5 Absolute Must-Read Books for Every Aspiring Java Developers
-author: Cotes Chung
+author: Hamza Belmellouki
 categories: [Books, Review]
 tags: [books]
 ---

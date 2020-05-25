@@ -1,7 +1,9 @@
-
-# Core Java: Date and Time
-
-
+---
+title: Core Java: Date and Time
+author: Hamza Belmellouki
+categories: [Core-Java]
+tags: [core-java]
+---
 
 ## Introduction
 
