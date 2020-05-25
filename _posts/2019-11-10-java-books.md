@@ -1,7 +1,7 @@
 ---
 title: 5 Absolute Must-Read Books for Every Aspiring Java Developers
 author: Hamza Belmellouki
-categories: [Books, Review]
+categories: [Books]
 tags: [books]
 comments: true
 ---
