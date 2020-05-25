@@ -1,7 +1,8 @@
 ---
 title: 5 Absolute Must-Read Books for Every Aspiring Java Developers
+author: Cotes Chung
 categories: [Books, Review]
-tags: [books]     # TAG names should always be lowercase
+tags: [books]
 ---
 
 # 5 Absolute Must-Read Books for Java Developers
