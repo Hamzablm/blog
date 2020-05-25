@@ -3,6 +3,7 @@ title: Simplify Strategy Using Lambda Expression
 author: Hamza Belmellouki
 categories: [Design Patterns]
 tags: [design patterns]
+comments: true
 --- 
 
 ## 1. Introduction
