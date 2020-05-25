@@ -1,6 +1,6 @@
 ---
 title: 5 Absolute Must-Read Books for Every Aspiring Java Developers
-categories: [Books]
+categories: [Books, Review]
 tags: [books]     # TAG names should always be lowercase
 ---
 
