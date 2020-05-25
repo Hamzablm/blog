@@ -3,7 +3,6 @@ title: Core Java&#58; Date and Time
 author: Hamza Belmellouki
 categories: [Java]
 tags: [core-java]
-layout: default
 comments: true
 ---
 
