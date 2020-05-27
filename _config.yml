@@ -51,7 +51,7 @@ timezone: Africa/Casablanca
 
 google_analytics:
   # Fill with your Google Analytics ID
-  id: ''
+  id: 'UA-157564913-1'
   # The Google Analytics pageviews switch.
 
   pv:
