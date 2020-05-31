@@ -298,5 +298,3 @@ Now that you've saw how to centralize your configuration in the configuration gi
 ## Wrap Up
 
 In this post I attempted to show you how to leverage the Spring ecosystem capabilities to honor Config factor in a Twelve-Factor application. 
-
-In the next article, I'll blog about writing integration tests using spring boot.
