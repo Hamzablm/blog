@@ -49,7 +49,7 @@ public class ConfigsApplication implements CommandLineRunner {
 
 If you’re working in the enterprise chances are your projects have to go into many different environments(Dev \| Test \| Stage \|UAT /Pre-Prod \| Prod). Each of these environments may have different settings that are specific to them. How can we load the appropriate settings in its appropriate environment? The simplest answer to this question is to work with Spring Profiles. You’ll map each environment to its configuration that’s defined as a properties or YAML file.
 
-You can leverage environment variables in your YAML files as this factor advocate. In fact, you should do that since you don’t want to check out sensitive info like db credentials into your source control management system.
+You can leverage environment variables in your YAML/properties files as this factor advocate. In fact, you should do that since you don’t want to check out sensitive info like db credentials into your source control management system.
 
 In this example, we’ll work with two environments: dev and prod. These two environments will differ in the database setup. For the dev environment, we’ll define a file called `application-dev.yml`. For prod, we’ll define it as `application-prod.yml`.
 
@@ -66,7 +66,7 @@ spring:
       ddl-auto: create
 ```
 
-Note I didn’t use environment variables because there’s no need, this profile is used solely for a dev environment(Don’t do that in prod).
+The above configuration didn’t use environment variables because there’s no need, this profile is used solely for a dev environment(Don’t do that in prod).
 
 application-prod.yml:
 
@@ -95,7 +95,7 @@ mvn spring-boot:run -Dspring.profiles.active=prod
 
 ### Environment Variable
 
-Setting up an environment variable can activate a profile. For example, in Unix environment you would set your env in .bashrc file like so:
+Activate a profile by setting up an environment variable. For example, in Unix environment you would set your env in .bashrc file like so:
 
 ```
 export spring_profiles_active=dev
@@ -103,7 +103,7 @@ export spring_profiles_active=dev
 
 ### Maven profile
 
-You can leverage Maven profiles to activate Spring Profiles. This is my favorite way to activate a profile. For example, if your profiles section we’ll define two maven profiles dev and prod, each of these profiles will set a JVM system parameter:
+You can leverage Maven profiles to activate Spring Profiles. This is my favorite way to activate a profile. For example, in your `profiles` section we’ll define two maven profiles `dev` and `prod`, each of these profiles will set a JVM system parameter:
 
 ```xml
 <profiles>
