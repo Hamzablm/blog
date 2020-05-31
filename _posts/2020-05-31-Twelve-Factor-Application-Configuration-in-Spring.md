@@ -47,9 +47,9 @@ public class ConfigsApplication implements CommandLineRunner {
 
 ## Profiles
 
-If you’re working in the enterprise chances are your projects have to go into many different environments(Dev \| Test \| Stage \|UAT /Pre-Prod \| Prod). Each of these environments may have different settings that are specific to them. How can we load the appropriate settings in its appropriate environment? The simplest answer to this question is to work with Spring Profiles. You’ll map each environment to its configuration that’s defined as a properties or YAML file.
+If you’re working in the enterprise chances are your projects have to go into many different environments(Dev \| Test \| Stage \|UAT /Pre-Prod \| Prod). Each of these environments may have different settings that are specific to them. How can we load the appropriate settings in its appropriate environment? The simplest answer to this question is to work with Spring Profiles. You’ll map each environment to its configuration that’s defined as a properties or yml file.
 
-You can leverage environment variables in your YAML/properties files as this factor advocate. In fact, you should do that since you don’t want to check out sensitive info like db credentials into your source control management system.
+You can leverage environment variables in your yml/properties files as this factor advocate. In fact, you should do that since you don’t want to check out sensitive info like db credentials into your source control management system.
 
 In this example, we’ll work with two environments: dev and prod. These two environments will differ in the database setup. For the dev environment, we’ll define a file called `application-dev.yml`. For prod, we’ll define it as `application-prod.yml`.
 
