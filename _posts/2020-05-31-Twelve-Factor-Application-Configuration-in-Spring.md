@@ -33,9 +33,11 @@ Here I am creating a command-line runner to print the value that is loaded from 
 public class ConfigsApplication implements CommandLineRunner {
     @Value("${message}")
     private String msg;
-public static void main(String[] args) {
+
+    public static void main(String[] args) {
         SpringApplication.run(ConfigsApplication.class, args);
     }
+
     @Override
     public void run(String... args) throws Exception {
         log.info(msg);
