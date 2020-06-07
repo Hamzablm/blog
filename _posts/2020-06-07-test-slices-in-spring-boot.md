@@ -124,7 +124,7 @@ public class EmployeeRepositoryTest {
 
 ### @RestClientTest
 
-Use `@RestClientTest` to speed up the testing of REST clients. this annotation will disable full auto-configuration and instead apply only configuration relevant to rest client tests (i.e. Jackson or GSON auto-configuration and `@JsonComponent` beans, but not regular `@Component` beans). It also auo-configure some essential beans like `RestTemplateBuilder` and `MockRestServiceServer`  and load them into the context. Now we'll test EmployeeDetailsService which perform an HTTP request `{id}/details` endpoint to retrieve an EmployeeDetails:
+Use `@RestClientTest` to speed up the testing of REST clients. this annotation will disable full auto-configuration and instead apply only configuration relevant to rest client tests (i.e. Jackson or GSON auto-configuration and `@JsonComponent` beans, but not regular `@Component` beans). It also auo-configure some essential beans like `RestTemplateBuilder` and `MockRestServiceServer`  and load them into the context. Now we'll test `EmployeeDetailsService` which perform an HTTP request to `http://localhost:8081/{id}/details` endpoint to retrieve an `EmployeeDetails` object:
 
 ```java
 @Service
@@ -137,7 +137,7 @@ public class EmployeeDetailsService {
     }
 
     public EmployeeDetails getEmployeeDetails(int id) {
-        return restTemplate.getForObject("/{id}/details", EmployeeDetails.class, id);
+        return restTemplate.getForObject("http://localhost:8081/{id}/details", EmployeeDetails.class, id);
     }
 }
 
@@ -178,6 +178,6 @@ public class EmployeeDetailsServiceTest {
 
 ## Wrap Up
 
-In this blog, I've discussed the most widely-used test slices. Note that I didn't cover them all. If you want to check others checkout this [link](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-project/spring-boot-test-autoconfigure/src/main/java/org/springframework/boot/test/autoconfigure).
+In this blog, I've discussed the most widely-used test slices. Note that I didn't cover them all. If you want to check others checkout this [link](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-project/spring-boot-test-autoconfigure/src/main/java/org/springframework/boot/test/autoconfigure). And as usual you can find these code snippets the [github repo](https://github.com/Hamzablm/test-slices).
 
 If you have any feedback about my blogs. Please, don't hesitate to reach out to me or just say a "hello" on twitter: [@HamzaLovesJava](https://twitter.com/HamzaLovesJava)
