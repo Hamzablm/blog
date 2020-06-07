@@ -62,12 +62,14 @@ public class EmployeeResourceTest {
 
     @Test
     public void shouldReturnOkayAndPayloadWhenRequestingEmployeeResource() throws Exception {
-        Mockito.doReturn(employees).when(employeeService).getAllEmployees();
+        doReturn(employees).when(employeeService).getAllEmployees();
         mockMvc.perform(MockMvcRequestBuilders.get("/employees"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].id").value(1))
                 .andExpect(jsonPath("$[0]firstName").value("a first name"))
                 .andExpect(jsonPath("$[0]lastName").value("a last name"));
+        
+        verify(employeeService).getAllEmployees();
     }
 }
 
@@ -124,7 +126,7 @@ public class EmployeeRepositoryTest {
 
 ### @RestClientTest
 
-Use `@RestClientTest` to speed up the testing of REST clients. this annotation will disable full auto-configuration and instead apply only configuration relevant to rest client tests (i.e. Jackson or GSON auto-configuration and `@JsonComponent` beans, but not regular `@Component` beans). It also auo-configure some essential beans like `RestTemplateBuilder` and `MockRestServiceServer`  and load them into the context. Now we'll test `EmployeeDetailsService` which perform an HTTP request to `http://localhost:8081/{id}/details` endpoint to retrieve an `EmployeeDetails` object:
+Use `@RestClientTest` to speed up the testing of REST clients. this annotation will disable full auto-configuration and instead apply only configuration relevant to rest client tests (i.e. Jackson or GSON auto-configuration and `@JsonComponent` beans, but not regular `@Component` beans). It also auto-configure some essential beans like `RestTemplateBuilder` and `MockRestServiceServer`  and load them into the context. Now we'll test `EmployeeDetailsService` which perform an HTTP request to `http://localhost:8081/{id}/details` endpoint to retrieve an `EmployeeDetails` object:
 
 ```java
 @Service
