@@ -6,7 +6,7 @@ tags: [spring-boot, testing]
 comments: true
 ---
 
-Greetings friends 👋
+Greetings friends 👋.
 
 One of the early mistakes that I've done in my first professional Spring-Boot based project was writing integration tests that load the entire `ApplicationContext` using `@SpringBootTest` annotation when there's no need. Thankfully, one of my colleagues was kind enough to help me understand that there is a better way to do things :) Writting tests like that may result in tests that may take hours which isn't good for continuous integration.
 

@@ -263,4 +263,4 @@ This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chi
 
 ## push changes
 - edit content (markdown)
-- run tools/init.sh to update categories and tags
+- run `tools/init.sh` to update categories and tags
