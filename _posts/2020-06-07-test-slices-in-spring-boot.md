@@ -1,6 +1,12 @@
-Title: Test Slices in Spring-Boot
+---
+title: Test Slices in Spring-Boot
+author: Hamza Belmellouki
+categories: [Spring]
+tags: [spring-boot, testing]
+comments: true
+---
 
-Greetings my friends 👋
+Greetings friends 👋
 
 One of the early mistakes that I've done in my first professional Spring-Boot based project was writing integration tests that load the entire `ApplicationContext` using `@SpringBootTest` annotation when there's no need. Thankfully, one of my colleagues was kind enough to help me understand that there is a better way to do things :) Writting tests like that may result in tests that may take hours which isn't good for continuous integration.
 
@@ -116,15 +122,62 @@ public class EmployeeRepositoryTest {
 
 ```
 
-
-
-### @JsonTest
-
 ### @RestClientTest
 
+Use `@RestClientTest` to speed up the testing of REST clients. this annotation will disable full auto-configuration and instead apply only configuration relevant to rest client tests (i.e. Jackson or GSON auto-configuration and `@JsonComponent` beans, but not regular `@Component` beans). It also auo-configure some essential beans like `RestTemplateBuilder` and `MockRestServiceServer`  and load them into the context. Now we'll test EmployeeDetailsService which perform an HTTP request `{id}/details` endpoint to retrieve an EmployeeDetails:
 
+```java
+@Service
+public class EmployeeDetailsService {
+
+    private final RestTemplate restTemplate;
+
+    public EmployeeDetailsService(RestTemplateBuilder restTemplateBuilder) {
+        this.restTemplate = restTemplateBuilder.build();
+    }
+
+    public EmployeeDetails getEmployeeDetails(int id) {
+        return restTemplate.getForObject("/{id}/details", EmployeeDetails.class, id);
+    }
+}
+
+@Data
+class EmployeeDetails {
+    private String address;
+    private int salary;
+}
+```
+
+`@RestClientTest` annotation's value attribute specify which service is under test. Doing so will speed up our test since only `EmployeeDetailsService` is loaded in the context along with other beans provided from the auto-configuration. This example demonstrates how to test `EmployeeDetailsService`:
+
+```java
+@RunWith(SpringRunner.class)
+@RestClientTest(EmployeeDetailsService.class)
+public class EmployeeDetailsServiceTest {
+
+    @Autowired
+    private EmployeeDetailsService employeeDetailsService;
+
+    @Autowired
+    private MockRestServiceServer mockRestServiceServer;
+
+    @Test
+    public void shouldReturnEmployeeDetailsFromHttpRequest() {
+        mockRestServiceServer.expect(requestTo("http://localhost:8081/1/details")).andRespond(
+                withSuccess(new ClassPathResource("employeeDetails.json"), MediaType.APPLICATION_JSON));
+
+        EmployeeDetails employeeDetails = employeeDetailsService.getEmployeeDetails(1);
+
+        assertThat(employeeDetails.getAddress()).isEqualTo("Morocco, Casablanca, Maarif");
+        assertThat(employeeDetails.getSalary()).isEqualTo(100_000);
+    }
+}
+```
+
+`MockRestServiceServer` mocks the expected behavior of the intended HTTP request made by a `RestTemplate` inside `EmployeeDetailsService`. Note that `ClassPathResource` picks `employeeDetails.json` from the root of the test classpath.
 
 ## Wrap Up
 
-In this blog I've discussed the most widely-used test slices. If you want to check others checkout this [link](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-project/spring-boot-test-autoconfigure/src/main/java/org/springframework/boot/test/autoconfigure).
+In this blog, I've discussed the most widely-used test slices. Note that I didn't cover them all. If you want to check others checkout this [link](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-project/spring-boot-test-autoconfigure/src/main/java/org/springframework/boot/test/autoconfigure).
 
+If you have any feedback about my blogs. Please, don't hesitate to reach out to me or just say a "hello" on twitter: [@HamzaLovesJava](https://twitter.com/HamzaLovesJava)
