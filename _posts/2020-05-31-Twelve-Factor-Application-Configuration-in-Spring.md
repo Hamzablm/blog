@@ -2,7 +2,7 @@
 title: Twelve-Factor Application&#58; Configuration in Spring
 author: Hamza Belmellouki
 categories: [Spring]
-tags: [spring-cloud, cloud-native]
+tags: [spring cloud, cloud native]
 comments: true
 ---
 
