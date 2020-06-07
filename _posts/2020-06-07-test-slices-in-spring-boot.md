@@ -8,13 +8,13 @@ comments: true
 
 Greetings friends 👋.
 
-One of the early mistakes that I've done in my first professional Spring-Boot based project was writing integration tests that load the entire `ApplicationContext` using `@SpringBootTest` annotation when there's no need. Thankfully, one of my colleagues was kind enough to help me understand that there is a better way to do things :) Writting tests like that may result in tests that may take hours which isn't good for continuous integration.
+One of the early mistakes that I've done in my first professional Spring-Boot based project was writing integration tests that load the entire `ApplicationContext` using `@SpringBootTest` annotation when there's no need. Thankfully, one of my colleagues was kind enough to help me understand that there is a better way to do things :) Writting tests like that will definitely slow down your continuous integration pipeline.
 
 Before talking about test slices I want to make a clear distinction between a unit test and an integration test in Spring: Unit testing doesn't involve loading the application context. On the other hand, integration testing is more involed with loading the application context.
 
 ## Test Slices
 
-Test Slices are a cool Spring-Boot feature introduced in 1.4. The idea is that Spring-Boot will bootstrap only the configuration meta-data that's appropriate for the test slice. Using this feature will result in a much lightweight `ApplicationContext`. Thus, the execution of our integration tests will be faster compared to loading the entire context. Now let's see some of these test slices in action.
+Test Slices are a cool Spring-Boot feature introduced in 1.4. The idea is that Spring-Boot will bootstrap only the configuration meta-data that's appropriate for the component that's under test. Using this feature will result in a much lightweight `ApplicationContext`. Thus, the execution of our integration tests will be faster compared to loading the entire context. Now let's see some of these test slices in action.
 
 ### @WebMvcTest
 
@@ -75,9 +75,9 @@ public class EmployeeResourceTest {
 
 ### @DataJpaTest
 
-We can leverage `@DataJpaTest` annotation to disable full auto-configuration and instead apply only configuration relevant to JPA tests. This will not only load repository components but also utility classes like ` DataSource`, `TestEntityManager` which can be used to save/find data in the DB. 
+We can leverage `@DataJpaTest` annotation to disable full auto-configuration and instead apply only configuration relevant to JPA tests. This will not only load repository components but also utility classes like `DataSource` and `TestEntityManager` which can be used to save/find data in the DB. 
 
-Note that by default, tests annotated with `@DataJpaTest` will configure an in-memory h2 database (can be overridden) for testing purposes. Also, tests are transactional and rolled back at the end of each test. In this example, I'd like to test `EmployeeRepository`:
+Note that by default, tests annotated with `@DataJpaTest` will auto-configure an in-memory h2 database (can be overridden) for testing purposes. Also, tests are transactional and rolled back at the end of each test. In this example, I'd like to test `EmployeeRepository`:
 
 ```java
 @Repository
