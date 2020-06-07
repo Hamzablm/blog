@@ -6,8 +6,6 @@ tags: [spring-cloud, cloud-native]
 comments: true
 ---
 
-## Introduction
-
 The Twelve-Factor application methodology is a collection of best practices that are designed to enable applications to be developed with portability and resilience when deployed. In this post, we’ll cover the third factor, [Config](https://12factor.net/config). We’ll also see how the spring ecosystem contributes to helping developers achieve this factor.
 
 The Twelve-Factor application manifesto advocates on externalizing configs(passwords, hostnames…) as [environment variables](https://en.wikipedia.org/wiki/Environment_variable):
