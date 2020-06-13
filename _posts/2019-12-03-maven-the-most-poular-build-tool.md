@@ -6,7 +6,6 @@ tags: [maven]
 comments: true
 --- 
 
-## 1. Introduction
 
 Maven is a build automation tool primarily used for Java projects, but with a little configuration, Maven can also be utilized to build and manage projects written in Kotlin, Groovy, Scala and other programming languages. Maven is so versatile, you can leverage it to automate tasks such as managing and downloading dependencies, putting additional jars on a classpath, compiling source code into bytecode, running tests, packaging compiled code into deployable artifacts such as JAR, WAR, and deploying these artifacts to an application server or repository.
 

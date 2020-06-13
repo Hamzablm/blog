@@ -6,7 +6,6 @@ tags: [design patterns]
 comments: true
 --- 
 
-## 1. Introduction
 
 The strategy design pattern is one of the most widely used patterns in the software development world. In this article, we’re going to learn about the strategy design pattern, when to use it, when not, how we can leverage the pattern to make our design flexible? And we are going to see an example of how to implement it with and without lambdas.
 

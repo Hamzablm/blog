@@ -6,8 +6,6 @@ tags: [spring-boot, testing]
 comments: true
 ---
 
-Greetings friends 👋.
-
 One of the early mistakes that I've done in my first professional Spring-Boot based project was writing integration tests that load the entire `ApplicationContext` using `@SpringBootTest` annotation when there's no need. Thankfully, one of my colleagues was kind enough to help me understand that there is a better way to do things :) Writting tests like that will definitely slow down your continuous integration pipeline.
 
 Before talking about test slices I want to make a clear distinction between a unit test and an integration test in Spring: Unit testing doesn't involve loading the application context. On the other hand, integration testing is more involed with loading the application context.

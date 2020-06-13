@@ -6,7 +6,7 @@ tags: [spring-core, aop]
 comments: true
 ---
 
-## 1. What is AOP
+## 1. What is AOP?
 
 To save you the time from looking up to Wikipedia here is the definition:
 > **aspect-oriented programming** (**AOP**) is a programming paradigm that aims to increase modularity by allowing the separation of cross-cutting concerns. It does so by adding additional behavior to existing code (an advice) *without* modifying the code itself, instead separately specifying which code is modified via a “pointcut” specification, such as “log all function calls when the function’s name begins with ‘set’ ”.

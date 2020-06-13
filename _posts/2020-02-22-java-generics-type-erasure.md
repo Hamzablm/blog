@@ -6,9 +6,6 @@ tags: [core-java]
 comments: true
 ---  
 
-## Introduction
-
-Greetings!
 
 Specifying the generic type allows Java to perform type checking at compile-time. But when using generics in your code, due to “*Type Erasure”* that occurs at compile-time, *generic type parameters* are converted to the `Object` type. This makes *generic* *type parameters* unable to call other methods except for the `Object` ones.
 

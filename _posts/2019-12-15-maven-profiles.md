@@ -6,8 +6,6 @@ tags: [maven]
 comments: true
 --- 
 
-## 1. Introduction
-
 In this article, we’re going to take a peek at Maven Build Profiles. Build profiles are often underestimated yet they have a lot of capabilities, and we are going to explore some of its capabilities. How we can use it? how we can leverage build profiles to make our build flexible?
 
 ## 2. Overview of Maven Build Profiles

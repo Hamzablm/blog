@@ -6,7 +6,6 @@ tags: [core-java]
 comments: true
 --- 
 
-## 1. Introduction
 
 When working with custom objects, we often want to compare them based on some pre-defined criteria. That’s why we use the `Comparable` interface to implement a *natural ordering* for our custom objects.
 

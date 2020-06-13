@@ -6,9 +6,6 @@ tags: [core-java]
 comments: true
 ---
 
-## Introduction
-
-Greetings!
 
 Since Java 8, Oracle completely rebuilt its Date/Time API. The new API is supposed to replace the old one.
 
