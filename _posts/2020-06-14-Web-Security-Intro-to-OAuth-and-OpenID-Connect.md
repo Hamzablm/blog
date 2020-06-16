@@ -1,8 +1,8 @@
 ---
 title: Web Security: Intro to OAuth and OpenID Connect (Part 1)
 author: Hamza Belmellouki
-categories: [Spring]
-tags: [spring-boot, testing]
+categories: [Security]
+tags: [OAuth, OIDC]
 comments: true
 ---
 
