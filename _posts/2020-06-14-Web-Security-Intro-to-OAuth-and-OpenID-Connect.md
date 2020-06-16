@@ -1,5 +1,5 @@
 ---
-title: Web Security: Intro to OAuth and OpenID Connect (Part 1)
+title: Web Security Intro to OAuth and OpenID Connect
 author: Hamza Belmellouki
 categories: [Security]
 tags: [OAuth, OIDC]
