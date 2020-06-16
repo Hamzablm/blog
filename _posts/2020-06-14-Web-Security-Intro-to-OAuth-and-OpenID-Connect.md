@@ -1,4 +1,10 @@
-# Web Security: Intro to OAuth 2.0 and OpenID Connect (Part 1)
+---
+title: Web Security: Intro to OAuth 2.0 and OpenID Connect (Part 1)
+author: Hamza Belmellouki
+categories: [Spring]
+tags: [spring-boot, testing]
+comments: true
+---
 
 OAuth 2.0 and OpenID Connect are becoming the de-facto standard for handling authentication and authorization in modern applications.
 
@@ -14,7 +20,7 @@ To save you the time from looking up to Wikipedia here is the definition:
 
 Keep in mind that OAuth 2.0 is an authorization framework. Like most frameworks, it does left many things undefined and it's up to the specific OAuth implementation to define the missing parts. 
 
-Here I am describing some of the most widely used oAuth 2.0 extensions
+Here I am describing some of the most widely used oAuth 2.0 extensions:
 
 #### JWT
 
@@ -30,9 +36,7 @@ A JWT contains fields like:
 
 #### Token revocation
 
-RFC 7009
-
-Used to enable a "log out" feature in clients
+The **token revocation** spec defined by [RFC 7009](https://tools.ietf.org/html/rfc7009) as a way to revoke(cancel) a token via API. Note that implementing this spec is optional, and it shouldn't be because if your tokens were leaked to malicious actors, you'd need a way to make the access token invalid without needing to wait for the expiration date of the token.
 
 #### Token introspect
 
@@ -81,18 +85,22 @@ If our token failed in any of the above checks, we shouldn't use that token beca
 
 **PS**: Implementing these steps yourself is error-prone and a daunting task. Luckily there are various libraries in every programming language that handles most of this work for you.
 
+### Refresh Token
 
+Because refresh token is an opaque token, it means that it can't be decoded and verified; thus, it can only be used in the token endpoint authorization server. Now the auth server grabs the refresh token, make sure it's still active, and then dispense a new access token and refresh token. Note that the revocation endpoint must be secured, for example, if someone gets a refresh token, they can each time(as long as refresh token not expired) generate new access and refresh token. We don't want this!
 
 ## What Is OpenID Connect?
 
 **OpenID Connect** (**OIDC**) is an authentication layer on top of OAuth 2.0. It provides the structure to a user profile, and allows you to selectively share it. So OIDC is just a special case of OAuth, and It's designed for Single Sign On(SSO) and sharing profile information. Like so GitHub, Twitter and many others use OIDC to share user profile information to clients.
 
-On top of OAuth 2.0, OIDC adds another type of token: the **ID Token**. This token is mandated to be a JWT. Most of the times it contains the user profile information. 
+On top of OAuth 2.0, OIDC adds another type of token: the **ID Token**. This token is highly defined and structured; it is mandated to be a JWT. Most of the times it contains the user profile information. 
 
-OIDC exposes user info endpoint to retreive user info. In general, this will retreive the exact user info which was available in the ID token itself. Thus, if you app trust the auth server that issued the token, we know who signed in and can use that to create a profile on our end.
+OIDC exposes user info endpoint to retreive user info. In general, this will retreive the exact user info which was available in the ID token itself. Thus, if you app trust the auth server that issued the token, we know who signed in and can use that to create a profile on our end. Note that OIDC supports only a subset of the OAuth grant types(we'll cover them in the next blog).
 
-
+The great thing about OIDC is that the structure and names of token claims are entirely defined by the specification with isn't the case when using jusr the regular OAuth.
 
 ## Wrap Up 
 
-In the next blog, we'll cover OAuth Grant Types
+In this blog, I've introduced you to the world of OAuth and OIDC. In the next part, we'll cover OAuth Grant Types.
+
+If you have any feedback about my blogs. Please, don't hesitate to reach out to me or just say a "hello" on twitter: [@HamzaLovesJava](https://twitter.com/HamzaLovesJava)
