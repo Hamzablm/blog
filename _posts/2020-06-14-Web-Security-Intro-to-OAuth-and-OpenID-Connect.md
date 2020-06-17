@@ -8,7 +8,9 @@ comments: true
 
 OAuth 2.0 and OpenID Connect are becoming the de-facto standard for handling authentication and authorization in modern applications.
 
-This post is the starting point of a series of posts covering OAuth 2.0 and OpenID Connect (OIDC). It introduces you to OAuth and OIDC and tells you why you'll want to leverage these mechanisms when dealing with authentication and authorization. We'll also take a look at OAuth tokens and the most widely used OAuth extensions.
+This post is the starting point of a series of posts covering OAuth 2.0 and OpenID Connect (OIDC). It introduces you to OAuth and OIDC and tells you why you'll want to leverage these mechanisms when dealing with authentication and authorization. We'll also take a look at OAuth tokens and the most widely used OAuth extensions. 
+
+Beware that I use the terms OAuth and OAuth 2.0 interchangeably. So when I say OAuth I mean OAuth 2.0 not the 1.0 version.
 
 ## What Is OAuth?
 
