@@ -10,17 +10,17 @@ A good internship can provide you with practical work experience and an opportun
 
 After finishing my software development studies at home by being a self-taught dev, I was contacted by a recruiter for an internship. Last week I had completed my three-month internship period and got hired as a Junior Backend Developer! In this post, I'd like to share my internship experience at xHub and things I've learned during this period.
 
-## Receiving Constructive Criticism
-Always ASK and ASK and ASK for feedback! As an intern, you'll make tons of mistakes. Consequently, you should have the courage to accept and ask for constructive criticism from your experienced colleagues. Don't take criticism personally. Adopting a humble mindset will encourage your mentors to give you more feedback about your work. 
-
-I can remember how much I failed my first pull requests. But luckily, I've asked them for a code review. My colleagues were kind and humble enough to help with that. 
-
-**Moral of the story: Have the courage to make mistakes and ask for feedback from your coworkers.**
-
 ## Professional Communication
 Excellent communication is the most crucial characteristic for success as a software developer. For most people, this may appear counterintuitive. Now you may ask: Don't developers spend all day coding? In fact, A large part of the day-to-day job of a software developer is not spent in code but instead working with a variety of people across the company. 
 
 I think we can all agree that a large part of professional software development is about writing documentation, doing code reviews, sending emails, and Slack messages, attending meetings. My genuine advice to you is to work on your communication skills. That will definitely benefit you in your career!
+
+## Constructive Criticism
+Always ASK and ASK and ASK for feedback! As an intern, you'll make tons of mistakes. Consequently, you should have the courage to accept and ask for constructive criticism from your experienced colleagues. Don't take criticism personally. Adopting a humble mindset will encourage your mentors to give you more feedback about your work. 
+
+I can remember how much I failed my first pull requests. But luckily, I've asked my colleagues for a code review and they were kind and humble enough to help me with that. 
+
+**Moral of the story: Have the courage to make mistakes and ask for feedback from your coworkers.**
 
 ## Adaptability
 Internships can have a steep learning curve during the first couple of weeks. During this period, you'll be working with industry best practices, which require you to learn about a new set of skills. Be patient and take it easy; after all, it's not simple to adapt, especially when you want to go outside your comfort zone.
@@ -31,7 +31,7 @@ Teamwork is an important skill you should concentrate on most during your intern
 
 You'll also learn how to collaborate with multiple people with diverse skills. This is very important since you'll be part of a cross-functional team.
 
-## Problem Solving Skills
+## Problem Solving
 Developing an adequate problem-solving approach can drive you onto the fastest path to success. An internship introduces you to real-world work problems and thus develops your problem-solving skills. 
 Now you've got your first stories assigned to you in your company's issue tracker. Great! How do you approach these issues? The first step is to **understand** the problem and then breaking it into manageable pieces that you can solve.
 
