@@ -1,5 +1,5 @@
 ---
-title: IntelliJ IDEA:&#58; Beyond The Basics
+title: IntelliJ IDEA&#58; Beyond The Basics
 author: Hamza Belmellouki
 categories: [IntelliJ]
 tags: [IntelliJ]
