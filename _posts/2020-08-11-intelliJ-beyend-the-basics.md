@@ -39,7 +39,7 @@ Sometimes actions can be hard to remember and take more time to type compared to
 
 After setting your action abbreviation. Call it using **Find by Action**. Type your abbreviation and boom your action will appear in two keystrokes:
 
-<img src="https://media.giphy.com/media/KDtmbLZypP3Erz0TF8/giphy.gif" alt="grab-landing-page" style="zoom:100%;" />
+<img src="https://media.giphy.com/media/KDtmbLZypP3Erz0TF8/giphy.gif" alt="grab-landing-page" style="zoom:150%;" />
 
 ## Navigation
 
