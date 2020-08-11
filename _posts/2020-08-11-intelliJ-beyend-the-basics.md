@@ -20,7 +20,7 @@ Up till now, most developers I've met are using IntelliJ with UI enabled.
 
 However, it isn't recommended to do it that way! If you want to take your IDEA's skills to the next level, you have to get rid of those UIs. They represent distraction to the developer, preventing you from focusing on what matters: Your code!
 
-Now you can remove these distractions by going into your **Main Menu | View | Appearance** and uncheck toolbar, tool window bar, navigation bar. What's left are tabs. Please get rid of them by right-click into the tab and choose **Configure Editor Tabs...** and on the appearance section, set **tab placement** to **None**. The resulting IDEA's UI would be:
+Now you can remove these distractions by going into your **Main Menu \| View \| Appearance** and uncheck toolbar, tool window bar, navigation bar. What's left are tabs. Please get rid of them by right-click into the tab and choose **Configure Editor Tabs...** and on the appearance section, set **tab placement** to **None**. The resulting IDEA's UI would be:
 
 ![](https://i.imgur.com/kpltSyQ.png)
 
