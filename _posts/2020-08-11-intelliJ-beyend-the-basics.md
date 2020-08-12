@@ -83,7 +83,7 @@ If you want to measure your productivity and see usage statistics for IntelliJ I
 
 Also, Checkout [Key Promoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x) plugin if you want to avoid using the mouse.
 
-Finally, the manual guide is the most comprehensive resource you can find online. So, make sure to skim through the manual if you want to know what other things you can do with IDEA.
+Finally, the [manual guide](https://www.jetbrains.com/help/idea/2020.2/getting-started.html#contact-support) is the most comprehensive resource you can find online. So, make sure to skim through the manual if you want to know what other things you can do with IDEA.
 
 
 
