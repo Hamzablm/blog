@@ -10,6 +10,6 @@ title: About
 
 Welcome visitor! Many thanks for stopping by!
 
-The purpose of this website is to document the things I learned so that you (and future me) don’t have to learn them the hard way (again). I'll be posting a blog every Sunday, so stay tuned.
+The purpose of this website is to document the things I learned so that you (and future me) don’t have to learn them the hard way (again).
 
 I am regularly active on twitter. Please don't hesitate to reach out to me or just say a "hello" on twitter: [@HamzaLovesJava](https://twitter.com/HamzaLovesJava)
