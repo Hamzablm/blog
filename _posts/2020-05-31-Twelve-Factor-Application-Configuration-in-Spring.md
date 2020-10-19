@@ -287,9 +287,9 @@ Notice now I got my property `project.message` from the git repo into my config 
 
 Now after running the config server, go ahead and run the config client by running `mvn spring-boot run`. Then go ahead and access this endpoint which just expose the configuration: `http://localhost:8080/msg`:
 
-`````
+```txt
 Blogging is awesome
-`````
+```
 
 Now that you've saw how to centralize your configuration in the configuration git repo and expose them using Spring Cloud Config Server make sure to clone the [repository](https://github.com/Hamzablm/spring-cloud-configs) if you want to run the demo.
 
