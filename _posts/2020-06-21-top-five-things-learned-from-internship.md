@@ -5,7 +5,6 @@ categories: [Career]
 tags: [career, experience]
 comments: true
 ---
-![grab-landing-page](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 A good internship can provide you with practical work experience and an opportunity to grow and learn before fully entering the working world. This is especially true for us student developers since we're stuck with the "hello world" based learning. An internship can help with that!
 
