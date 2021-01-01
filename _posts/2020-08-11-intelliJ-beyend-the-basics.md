@@ -9,7 +9,7 @@ IntelliJ IDEA Ultimate is the most powerful IDE for JVM developers in the market
 
 Java developers spend a tremendous amount of time in front of their IDEs. Unfortunately, I've noticed that developers don't take advantage of IDEA's powerful features.
 
-In this blog, I'll talk about some tricks that I use my day to day job. And show you some best practices that can boost your productivity 😉.
+In this blog, I'll talk about some tricks that I use my day to day job. And show you some best practices that can boost your productivity.
 
 # UI-Less mode
 
