@@ -5,7 +5,6 @@ categories: [Java]
 tags: [core-java]
 comments: true
 ---
-# 
 Initially, JCP (Java Community Process) started developing JPMS(Java Platform Module System) in 2006 as JSR 277, and it was scheduled to be released in Java 7. But for some reason, it wasn't. In 2008, this JSR was dropped and replaced by JSR 376 under the umbrella of project Jigsaw. Eventually, it was released in Java 9 in 2017.
 
 This article goes over the pain points that Java developers faced before Java 9. How can JPMS help us in solving these issues? How does JPMS impact the Java platform? And how's the tooling support in JPMS?
