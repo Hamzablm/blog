@@ -1,8 +1,8 @@
 ---
 title: Working With Nulls in the Java Ecosystem
 author: Hamza Belmellouki
-categories: [core java]
-tags: [corejava]
+categories: [Java]
+tags: [core-java]
 comments: true
 ---
 
