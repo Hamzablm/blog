@@ -239,5 +239,5 @@ There are other numerous handy Optional methods that you'll likely wanna use: `i
 The best way to learn about them is to go and explore the API at the [Javadoc](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Optional.html).
 
 ## Wrap up
-In this post, we've seen how nulls can make our code unpleasant to work with. Also, we've looked over some modern best practices and patterns you can implement when working with nulls.
+In this post, we've seen how nulls can make our code unpleasant to work with. Also, we've looked over some modern best practices and patterns you can implement when working with nulls.  
 If you have any feedback on this post. Please, don't hesitate to reach out to me or just say a "hello" on [Twitter](https://twitter.com/HamzaLovesJava).
