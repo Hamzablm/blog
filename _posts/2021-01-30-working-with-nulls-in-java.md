@@ -7,7 +7,7 @@ comments: true
 ---
 
 A null value can appear anywhere in a Java application.
-In this post, we'll see how to work with data you control as well as data you don't. And, see how we can use annotation libraries like JSR 380, Spring annotations, and Lombok to handle null values.
+In this post, we'll see how to work with data you control as well as data you don't. We'll also discuss how we can use annotation libraries like JSR 380, Spring annotations, Lombok, and some patterns to handle null values.
 
 ## Dealing with nulls: Old way
 
