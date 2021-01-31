@@ -103,7 +103,7 @@ void bar(List list, String msg) {
         
 }
 ```
-Another thing to remember is never to return a null value in a method. For that, you can use the **null object pattern**. For example, if your method returns a `Collection`. Instead of returning `null`, you would return an empty collection. Or you can use the `Optional` type as it provides a clear and explicit way to convey the message that there may NOT be a value without using `null`.
+Another thing to remember is never to return a null value in a method. For that, you can use the **null object pattern**. For example, if your method returns a `Collection`. Instead of returning `null`, you would return an empty collection. Or you can use the `Optional` type as it provides a clear and explicit way to communicate the message that there may NOT be a value without using `null`.
 
 Finally, having a good suite of tests will definitely help you detect programming bugs caused by nulls.
 
